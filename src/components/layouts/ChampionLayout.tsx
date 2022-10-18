@@ -26,13 +26,19 @@ export const ChampionLayout: FC<Props> = ({
                 />
                 <meta name="og:title" content={title} />
                 <meta name="og:description" content={pageDescription} />
+
                 {imageFullUrl && <meta name="og:image" content={imageFullUrl} />}
+
                 <title>{title}</title>
-                <link rel="icon" href="/vercel.svg" />
+                <link
+                    rel="icon"
+                    href="https://www.leagueoflegends.com/static/favicon-0cf29ce019f7cd1e7b24f85ab6ff97da.ico"
+                />
             </Head>
 
             <header>{/* <Navbar /> */}</header>
 
+            {/* className="w-11/12 max-w-screen-xl my-0 mx-auto overflow-hidden px-0 py-7 font-roboto" */}
             <main>{children}</main>
         </>
     );

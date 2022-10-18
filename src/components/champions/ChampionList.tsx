@@ -8,7 +8,7 @@ interface Props {
 
 export const ChampionList: FC<Props> = ({ champions }) => {
     return (
-        <section>
+        <section className="grid grid-cols-custom gap-5 w-11/12 max-w-screen-xl my-0 mx-auto overflow-hidden px-0 py-7 font-roboto">
             {Object.values(champions).map((champion) => (
                 <ChampionCard key={champion.id} champion={champion} />
             ))}
