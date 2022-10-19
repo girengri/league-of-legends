@@ -4,7 +4,7 @@ import { ChampionLayout } from "../components/layouts";
 import { FullScreenLoading, HeroVideo } from "../components/ui";
 import { useChampions } from "../hooks";
 
-const Home: NextPage = () => {
+const HomePage: NextPage = () => {
   const { champions, isLoading } = useChampions(
     "http://ddragon.leagueoflegends.com/cdn/12.19.1/data/es_MX/champion.json"
   );
@@ -39,4 +39,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default HomePage;

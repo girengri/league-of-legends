@@ -12,6 +12,7 @@ module.exports = {
       gridTemplateColumns: {
         custom: "repeat(auto-fill, minmax(202px, 1fr))",
       },
+
       colors: {
         background: "#061c25",
         "background--hover": "rgb(0, 102, 128)",
