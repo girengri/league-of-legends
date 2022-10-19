@@ -26,9 +26,10 @@ export const ChampionLayout: FC<Props> = ({
                 />
                 <meta name="og:title" content={title} />
                 <meta name="og:description" content={pageDescription} />
-
                 {imageFullUrl && <meta name="og:image" content={imageFullUrl} />}
-
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={pageDescription} />
+                {imageFullUrl && <meta name="twitter:image" content={imageFullUrl} />}
                 <title>{title}</title>
                 <link
                     rel="icon"

@@ -11,22 +11,29 @@ interface Props {
 }
 
 const ChampionPage: NextPage<Props> = ({ championFeatures }) => {
+    const championFeature = Object.values(championFeatures.champion).map(
+        (feature: any) => feature
+    );
+
+    const pageDescription = championFeature[0].lore.substring(0, 251);
+
+    console.log(championFeature);
+
     return (
-        <ChampionLayout pageDescription={""} title={""}>
+        <ChampionLayout
+            title={`${championFeature[0].name}, ${championFeature[0].title} - League of Legends`}
+            pageDescription={`${pageDescription}...`}
+            imageFullUrl={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championFeature[0].id}_0.jpg`}
+        >
             <div>
-                {Object.values(championFeatures.champion).map((feature: any) => (
-                    <section key={feature.id}>
-                        <article>
-                            <picture style={{height: "500px"}}>
-                                <img
-                                    src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${feature.id}_0.jpg`}
-                                    width="100%"
-                                    alt=""
-                                />
-                            </picture>
-                        </article>
-                    </section>
-                ))}
+                <section key={championFeature[0].id}>
+                    <article
+                        className="w-full h-[700px] bg-no-repeat bg-cover bg-fixed"
+                        style={{
+                            backgroundImage: `url("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championFeature[0].id}_0.jpg")`,
+                        }}
+                    ></article>
+                </section>
             </div>
         </ChampionLayout>
     );
