@@ -7,6 +7,7 @@ interface Props {
     imageFullUrl?: string;
     pageDescription: string;
     title: string;
+    clase?: string;
 }
 
 export const ChampionLayout: FC<Props> = ({
@@ -40,6 +41,7 @@ export const ChampionLayout: FC<Props> = ({
             <header>{/* <Navbar /> */}</header>
 
             {/* className="w-11/12 max-w-screen-xl my-0 mx-auto overflow-hidden px-0 py-7 font-roboto" */}
+
             <main>{children}</main>
         </>
     );
