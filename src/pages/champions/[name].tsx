@@ -25,7 +25,7 @@ const ChampionPage: NextPage<Props> = ({ championFeatures }) => {
         >
             <section className="bg-[#000913]">
                 <div
-                    className="w-full h-[700px] bg-no-repeat bg-contain flex flex-col justify-around"
+                    className="w-full h-[100vh] bg-no-repeat bg-contain lg:bg-cover flex flex-col justify-around"
                     style={{
                         backgroundImage: `url("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championFeature[0].id}_0.jpg")`,
                     }}
@@ -41,7 +41,7 @@ const ChampionPage: NextPage<Props> = ({ championFeatures }) => {
                         </div>
                     </div>
 
-                    <div className="backdrop-blur-xl">
+                    <div className="backdrop-blur-xl lg:mt-[12rem]">
                         <div className="w-11/12 max-w-screen-xl my-0 mx-auto overflow-hidden px-0 py-7 font-roboto flex flex-col border-2 border-[#333a42]">
                             <div className="flex justify-around pb-[2rem]">
                                 <div className="flex flex-col items-center">
@@ -58,8 +58,8 @@ const ChampionPage: NextPage<Props> = ({ championFeatures }) => {
                             </div>
 
                             <div>
-                                <p className="text-white p-[2rem]">
-                                    {championFeature[0].blurb}
+                                <p className="text-white p-[2rem] font-bold">
+                                    {championFeature[0].lore}
                                 </p>
                             </div>
                         </div>
@@ -67,7 +67,7 @@ const ChampionPage: NextPage<Props> = ({ championFeatures }) => {
                 </div>
             </section>
 
-            <div></div>
+            <section className="bg-[#000913]"></section>
         </ChampionLayout>
     );
 };
