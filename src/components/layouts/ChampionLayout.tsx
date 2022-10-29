@@ -50,9 +50,19 @@ export const ChampionLayout: FC<Props> = ({
                         <h1 className="pr-[1rem] font-bold uppercase text-[#fff] lg:text-[#000]">
                             &copy;2022. Giovany Rendon.
                         </h1>
-                        <p className="font-bold text-[1rem] text-[#fff] lg:text-[#000]">
+
+                        <p className="font-bold text-[1rem] text-[#fff] lg:text-[#000] pr-[1rem]">
                             Todos los derechos reservados
                         </p>
+
+                        <div>
+                            <a
+                                className="font-bold text-[1rem] text-[#fff] lg:text-[#000]"
+                                href="mailto:giova.rendon96@gmail.com"
+                            >
+                                giova.rendon96@gmail.com
+                            </a>
+                        </div>
                     </section>
                 </div>
             </footer>
