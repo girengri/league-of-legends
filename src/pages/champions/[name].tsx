@@ -1,4 +1,6 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
+import { useRouter } from "next/router";
+
 import { lolApi } from "../../api";
 import { ChampionSlideshow } from "../../components/champions";
 import { ChampionLayout } from "../../components/layouts";
@@ -12,6 +14,12 @@ interface Props {
 }
 
 const ChampionPage: NextPage<Props> = ({ championFeatures }) => {
+    const router = useRouter();
+
+    const goToHome = () => {
+        router.push("/");
+    };
+
     const championFeature = Object.values(championFeatures.champion).map(
         (feature: any) => feature
     );
@@ -29,7 +37,7 @@ const ChampionPage: NextPage<Props> = ({ championFeatures }) => {
                         backgroundImage: `url("http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championFeature[0].id}_0.jpg")`,
                     }}
                 >
-                    <div className="w-11/12 max-w-screen-xl my-0 mx-auto overflow-hidden px-0 py-7 font-roboto flex justify-center items-end">
+                    <div className="w-11/12 max-w-screen-xl my-0 mx-auto overflow-hidden px-0 py-7 font-roboto flex justify-center items-end relative">
                         <div className="text-center">
                             <p className="font-bold text-xl text-white uppercase tracking-wider italic">
                                 {championFeature[0].title}
@@ -38,6 +46,13 @@ const ChampionPage: NextPage<Props> = ({ championFeatures }) => {
                                 {championFeature[0].name}
                             </h2>
                         </div>
+
+                        <button
+                            className="absolute text-white top-[108px] sm:top-[3rem] right-0 bg-[#0000009d] p-3 rounded-[15px] border-[1px] border-solid border-[#0bc6e3] scale-95 transition  hover:transition ease-in-out hover:scale-100 hover:cursor-pointer uppercase text-[0.9]"
+                            onClick={goToHome}
+                        >
+                            Lista de campeones
+                        </button>
                     </div>
 
                     <div className="backdrop-blur-xl lg:mt-[12rem]">
