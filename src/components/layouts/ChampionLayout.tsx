@@ -43,6 +43,19 @@ export const ChampionLayout: FC<Props> = ({
             </Head>
 
             <main>{children}</main>
+
+            <footer className="bg-[#000] lg:bg-[#fff]">
+                <div className="flex flex-col justify-center items-center w-11/12 max-w-screen-xl my-0 mx-auto overflow-hidden px-0 py-7 font-roboto">
+                    <section className="flex flex-col md:flex-row justify-center items-center">
+                        <h1 className="pr-[1rem] font-bold uppercase text-[#fff] lg:text-[#000]">
+                            &copy;2022. Giovany Rendon.
+                        </h1>
+                        <p className="font-bold text-[1rem] text-[#fff] lg:text-[#000]">
+                            Todos los derechos reservados
+                        </p>
+                    </section>
+                </div>
+            </footer>
         </>
     );
 };

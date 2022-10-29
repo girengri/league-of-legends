@@ -16,7 +16,7 @@ export const ChampionSlideshow: FC<Props> = ({ images, id }) => {
     );
 
     return (
-        <Slide easing="ease" duration={4000} indicators>
+        <Slide easing="ease" duration={2000} indicators>
             {urlImages.map((image: string, index: number) => {
                 return (
                     <div key={index} className={styles["each-slide"]}>
