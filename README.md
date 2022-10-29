@@ -3,7 +3,7 @@
 League of legends es la plataforma donde puede encontrar su campeon favorito del videojuego league of legends.&nbsp; &nbsp; &nbsp;&nbsp;
 
 
-Puede verlo aquí: <https://blockmastermovies.vercel.app/>
+Puede verlo aquí: <https://league-of-legends-two.vercel.app//>
 
 ## Requerimientos
 - Tener instalado git en nuestro pc
