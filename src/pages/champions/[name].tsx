@@ -1,5 +1,6 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { lolApi } from "../../api";
+import { ChampionSlideshow } from "../../components/champions";
 import { ChampionLayout } from "../../components/layouts";
 
 import { getChampionInfo } from "../../utils";
@@ -14,8 +15,6 @@ const ChampionPage: NextPage<Props> = ({ championFeatures }) => {
     const championFeature = Object.values(championFeatures.champion).map(
         (feature: any) => feature
     );
-
-    console.log(championFeature);
 
     return (
         <ChampionLayout
@@ -67,7 +66,18 @@ const ChampionPage: NextPage<Props> = ({ championFeatures }) => {
                 </div>
             </section>
 
-            <section className="bg-[#000913]"></section>
+            <section className="bg-[#000913] lg:bg-[#fff]">
+                <div className="w-11/12 max-w-screen-xl my-0 mx-auto overflow-hidden px-0 py-7 font-roboto">
+                    <h2 className="text-white lg:text-[#000] font-bold text-xl uppercase tracking-wider italic pb-[2rem]">
+                        Aspectos disponibles
+                    </h2>
+
+                    <ChampionSlideshow
+                        id={championFeature[0].id}
+                        images={championFeature[0].skins}
+                    />
+                </div>
+            </section>
         </ChampionLayout>
     );
 };
