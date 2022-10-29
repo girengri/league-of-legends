@@ -1,4 +1,4 @@
-# 🍿 League of legend
+# 🎮 League of legend
 
 League of legends es la plataforma donde puede encontrar su campeon favorito del videojuego league of legends.&nbsp; &nbsp; &nbsp;&nbsp;
 
@@ -12,7 +12,7 @@ Puede verlo aquí: <https://league-of-legends-two.vercel.app//>
 ## 🔥 Instalación
 
 ```shell
-git clone --branch desarrolloGiovany https://github.com/girengri/blockmastermovies.git
+git clone https://github.com/girengri/league-of-legends.git
 yarn install
 yarn dev
 ```
