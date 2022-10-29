@@ -31,6 +31,7 @@ export const ChampionLayout: FC<Props> = ({
                 <meta name="twitter:title" content={title} />
                 <meta name="twitter:description" content={pageDescription} />
                 {imageFullUrl && <meta name="twitter:image" content={imageFullUrl} />}
+                <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
                 <title>{title}</title>
                 <link
                     rel="icon"
